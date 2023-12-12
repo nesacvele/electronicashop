@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store from './store/store';
 
 // pages
 import ProductPage from './pages/ProductPage';
@@ -10,6 +12,7 @@ import ErrorPage from './pages/ErrorPage';
 import LoginPage from './pages/LoginPage';
 import FavoritePage from './pages/FavoritePage';
 import CartPage from './pages/CartPage';
+import ProfilePage from './pages/ProfilePage';
 
 const router = createBrowserRouter([
   // mainRouter
@@ -32,6 +35,10 @@ const router = createBrowserRouter([
       {
         path: '/cart',
         element: <CartPage />
+      },
+      {
+        path: '/profile',
+        element: <ProfilePage />
       }
     ],
     errorElement: <ErrorPage/>,
@@ -43,7 +50,9 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   </React.StrictMode>
 );
 
