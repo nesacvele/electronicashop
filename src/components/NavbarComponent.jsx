@@ -8,7 +8,7 @@ import { useSelector } from 'react-redux';
 function NavbarComponent() {
 
   const {user} = useSelector((state) => state.userStore);
-  console.log(user);
+  // console.log(user);
 
   return (
     <div className='bg-mainBlue h-[100px]'>

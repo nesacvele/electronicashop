@@ -24,7 +24,7 @@ function LoginPage() {
       }),
 
       onSubmit: (values) => {
-        UserService.loggedIn(values)
+        UserService.loggedIn({...values, expiresInMins: 120})
           .then(res => {
             if(res.status === 200){
               toast.success('User successfuly logged in!')

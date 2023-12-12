@@ -1,8 +1,11 @@
 import React from 'react'
+import CategoryComponent from '../components/CategoryComponent'
 
 function ProductPage() {
   return (
-    <div>ProductPage</div>
+    <div>
+      <CategoryComponent />
+    </div>
   )
 }
 
