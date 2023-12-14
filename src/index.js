@@ -13,6 +13,7 @@ import LoginPage from './pages/LoginPage';
 import FavoritePage from './pages/FavoritePage';
 import CartPage from './pages/CartPage';
 import ProfilePage from './pages/ProfilePage';
+import ProductDetailsPage from './pages/ProductDetailsPage';
 
 const router = createBrowserRouter([
   // mainRouter
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
       {
         path: '/profile',
         element: <ProfilePage />
+      },
+      {
+        path: '/productDetails',
+        element: <ProductDetailsPage/>
       }
     ],
     errorElement: <ErrorPage/>,

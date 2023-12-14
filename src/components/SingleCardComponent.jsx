@@ -10,7 +10,7 @@ function SingleCardComponent({product}) {
             <p>{product.price}</p>
             <p>{product.description.slice(0, 50)}...</p>
         </div>
-        <Link to={`/productDetails/${product.id}`}>
+        <Link className='mt-[15px] bg-mainYellow text-center px-[16px] py-[8px]' to={`/productDetails/${product.id}`}>
             See More
         </Link>
     </div>
